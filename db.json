@@ -8,24 +8,6 @@
       "price": 200,
       "date": "2022-05-29T19:30:00.000Z",
       "id": 1
-    },
-    {
-      "productNme": "Book",
-      "category": "Electronic",
-      "freshness": "Brand New",
-      "comment": "its nice",
-      "price": 333,
-      "date": "2022-05-29T19:30:00.000Z",
-      "id": 2
-    },
-    {
-      "productNme": "hadi",
-      "category": "Vagetables",
-      "freshness": "Second Hand",
-      "comment": "good",
-      "price": 444,
-      "date": "2022-05-22T19:30:00.000Z",
-      "id": 3
     }
   ],
   "comments": [
