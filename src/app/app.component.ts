@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  displayedColumns: string[] = ['productNme','date', 'category', 'freshness', 'comment','price'];
+  displayedColumns: string[] = ['productNme','date', 'category', 'freshness', 'comment','price','Action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -32,7 +32,25 @@ export class AppComponent implements OnInit {
     this.dialog.open(DialogComponent, {
       width: '30%' ,
       height: '70%'
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val === 'seve'){
+        this.getAllProduct()
+      }
+    }
+    )
+  }
+
+  editProduct(row: any) {
+    this.dialog.open(DialogComponent, {
+      width: '30%',
+      height: '70%',
+      data:row
+    }).afterClosed().subscribe(val=>{
+      if(val === 'Update'){
+        this.getAllProduct()
+      }
+    }
+    )
   }
 
 
