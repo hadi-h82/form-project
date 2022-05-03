@@ -54,7 +54,6 @@ export const UIModule = [
 export const modules = [
   ReactiveFormsModule,
   HttpClientModule,
-  BrowserAnimationsModule,
   ToastrModule.forRoot(),
 ];
 @NgModule({
